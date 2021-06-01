@@ -1,0 +1,70 @@
+Week 1
+- first class, set up computers, assisted new students with finding their group, introduced myself to the new Ops team members and helped them get
+their computers together.
+
+-meeting with rob and faisal about expectations for the group. Got assigned the correspondance role alongside jae. Identified tasks that we would
+need to work on over the semester, Cuckoo Security Sandbohttps://forum.bestpractical.com/t/cross-site-forgery/31763x, Help Desk Migration, Malware Reverse Engineering, Ticketing System and the DB2 Transfer. 
+Post meeting I cleared up the teams 'to-do' list from last semester, updated the d313 PC cleanup task, made sure everyone had a partner for it and 
+assigned a schedule. After this I went around the team making sure that everyone had a task that they were working on and that it was a relatively even spread
+I remember last year struggling to know what I was doing, so I thought this would be a good idea. Following this, I began researching for a solution to
+the ticketing system that would need implementing. I studied over several different options and discussed with faisal about the requirements. Over the weekend
+I compiled a document to present on Monday Week 2 with a few options as well as our final recommendation. 
+
+week 2
+- during the first class of the week I presented my proposal to faisal. We discussed over the pricing options and he agreed that RT Resource tracker was the right
+move going forward with this. I teamed up with Roy going forward to construct a report on what we'd need going forward resource wise. I believe that we'll be able
+to get this done before next monday.
+
+- Due to rising covid-19 alert levels within auckland this class period was done working remotely over a team call. We began a call where Faisal asked each of us to go
+over what we were working on. I found quickly that my microphone wasn't being picked up by the web-browser, meaning I had to type out my responses. Obviously as
+this is a test for remote working this was something I needed to fix. After downloading the teams application, I was able to use my microphone through that. This means
+that if we do end up going back into lockdown I will be able to work remotely.
+
+I was working with roy on developing a report for what we'd require for deployment. However, he was needed elsewhere so he left after the briefing. I did as much as I could
+do before his input, however I was left high and dry so to speak. I asked Roy if he would be able to get his end of things to me before Sunday at the latest.
+
+Week 3
+- Roy got in contact with me on Sunday, letting me know that he had run out of to finish his side of things and that he'll try and do something before Project today. However
+as we're meant to be presenting this document at the beginning of class today, I knew that this wasn't going to work out. Letting Roy know not to bother, I went about handling
+things and completed both ends of the report myself. After getting approval from Faisal to continue with our proposal and spin up the resources that we needed, I went about updating Roy on what
+had been done and what we would need to do going forward. After digging around in Azure, we went about creating the ubuntu virtual machine. However, it turned out that we had not
+yet been given permission to work within the resource group, presumably due to the fact that our permissions were stripped during the semester break. After informing Faisal of this, we headed home as it would
+take time for the permission changes to apply.
+
+During the second shift of project for the week, I was at home due to external circumstances. Because of this, Roy was setting up the VM alone. After doing so, he found that he was unable to connect
+to his own VM. I am currently waiting for the login credentials from Roy in order to test this myself.
+
+week 4
+Unable to connect to the virtual machine, I spent the time before project attacking the problem. In the end, I generated a new public key and had to reset the virtual machine to match it. Doing this allowed
+me to connect to the virtual machine via command line. (picture included called rt host connection). From here Roy and myself moved on to installing RT onto the system. this begun with setting up 
+the dependencies, including Apache and required modules FCGID (sudo apt-get install libapache2-mod-fcgid). However
+
+Holidays
+Came in to install SSD's, motherboards and windows. Ended up doing nothing. Was lit.
+
+9
+Hamish approached jae and I in regards to working with a charity com2tech. He discussed how he wants two groups of students working alongside with a representative from the charity.
+The work would involve refirbishing old computers which would then be distributed to low income families, schools, etc. After taking some notes during the meeting with him, we let him know we'd 
+have a proper response for him by next Wednesday, as we would need time in order to ask around the group to see who was interested. As Jae has a busier schedule than I do currently
+I decided that I would take charge and manage this job. 
+
+10
+asked around students. Got numbers for com2tech. Messaged hamish a bunch. Pushed it in meetings. On Friday at 3:30pm Isaac, Roy, Prasanth, Woman and I went to the charity. Worked on computers. Talk about
+learning how to use air compressor. Have picture of how many that we did. Discuss process. 
+
+11
+This time no one came to the charity and it was just me and Tim from Com2Tech. Despite having less numbers due to other people having stuff on, which is something we have to expect as 
+students have busy schedules and they shouldn't have this as a priority over their classes. Installed windows on 5 PC's over Linux distrobutions. Cleaned out. Replaced parts and got out to go.
+
+week 12
+We ran into an issue with our ticketing system this week. We were getting an error while attempting to create tickets. This seemingly came up as a result of the shift of url from an IP address to
+Isaacrt.op-bit.nz. While our original IP was whitelisted in order to post, this wasn't the case for our new address. As a result of this we had to adjust our whitelist settings within our RT config file
+specifically /opt/rt5/etc/RT_SiteConfig.pm. An image of the solution is included. After restarting apache2 tickets were able to be created with no issues. Faisal has given us an email to study 
+to go over and emulate, in an attempt to increase the groups communication skills. 
+
+
+
+
+
+
+
